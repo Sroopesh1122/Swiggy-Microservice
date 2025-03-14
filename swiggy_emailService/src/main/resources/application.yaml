@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: swiggy-emailService
+server:
+  port: 8089
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/			
+properties.email: foodieteam2025@gmail.com
+properties.password: pxkf sfjp mkth nrvh

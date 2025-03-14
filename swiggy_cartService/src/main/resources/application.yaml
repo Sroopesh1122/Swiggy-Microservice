@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: swiggy-cartService
+  datasource:
+    url: jdbc:mysql://localhost:3306/swiggy_db_cartServiceDB?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8087
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

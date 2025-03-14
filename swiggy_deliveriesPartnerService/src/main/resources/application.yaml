@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: swiggy-deliveryPartnerService
+  datasource:
+    url: jdbc:mysql://localhost:3306/swiggy_db_deliveryPartnerServiceDB?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8084
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+FRONTEND_URL: http://localhost:5174/

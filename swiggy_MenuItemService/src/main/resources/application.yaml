@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: swiggy-menuItemService
+  datasource:
+    url: jdbc:mysql://localhost:3306/swiggy_db_menuItemServiceDB?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -1,0 +1,24 @@
+package com.shivu.swiggy_emailService.exception;
+
+import org.springframework.http.HttpStatus;
+
+public class EmailException extends RuntimeException
+{
+	private static final long serialVersionUID = 1L;
+	
+	private HttpStatus status;
+
+	public EmailException(String message , HttpStatus status) {
+		super(message);
+		this.status = status;
+	}
+	
+	
+	public HttpStatus getStatus()
+	{
+		return status;
+	}
+	
+	
+	
+}

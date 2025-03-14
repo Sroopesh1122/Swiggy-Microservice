@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: swiggy-paymentService
+server:
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+RAZORPAY_API_KEY: rzp_test_LlqzAuvt2E191U
+RAZORPAY_SECRET_KEY: AVkua6VjB8TbbZiAc34vqQrQ

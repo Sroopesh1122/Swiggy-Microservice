@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: swiggy-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: swiggy-userService
+          uri: lb://swiggy-userService
+          predicates:
+            - Path=/api/user/**
+        - id: swiggy-restaurantService
+          uri: lb://swiggy-restaurantService
+          predicates:
+            - Path=/api/restaurant/**
+        - id: swiggy-deliveryPartnerService
+          uri: lb://swiggy-deliveryPartnerService
+          predicates:
+            - Path=/delivery/**
+        - id: swiggy-authService
+          uri: lb://swiggy-authService
+          predicates:
+            - Path=/auth/**
+        - id: swiggy-cartService
+          uri: lb://swiggy-cartService
+          predicates:
+            - Path=/api/cart/**
+        - id: swiggy-deliveriesService
+          uri: lb://swiggy-deliveriesService
+          predicates:
+            - Path=/api/deliveries/**
+        - id: swiggy-menuItemService
+          uri: lb://swiggy-menuItemService
+          predicates:
+            - Path=/api/menu/**
+        - id: swiggy-orderService
+          uri: lb://swiggy-orderService
+          predicates:
+            - Path=/api/order/**
+        - id: swiggy-paymentService
+          uri: lb://swiggy-paymentService
+          predicates:
+            - Path=/api/payment/**
+        - id: swiggy-reviewService
+          uri: lb://swiggy-reviewService
+          predicates:
+            - Path=/api/review/**
+
+server:
+  port: 8085
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
